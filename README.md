@@ -1,5 +1,12 @@
 # README
 
+## Screenshots
+
+![alt tag](https://raw.githubusercontent.com/ltfschoen/demo_fileupload/master/screenshots/screenshot_psql.png)
+![alt tag](https://raw.githubusercontent.com/ltfschoen/demo_fileupload/master/screenshots/screenshow_view_fileuploaded.png)
+
+## Setup Instructions
+
 * Create Rails app specifically using PSQL DB
   ```
   rails new carrierwave-test --database=postgresql
