@@ -11,6 +11,9 @@ class MenusController < ApplicationController
   # GET /menus/1
   # GET /menus/1.json
   def show
+    # puts @menu.methods
+    puts "AVATAR_URL: #{@menu.avatar_url}"
+    puts "AVATAR_URL TO_S: #{@menu.avatar_url.to_s}"
   end
 
   # GET /menus/new
@@ -70,6 +73,6 @@ class MenusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def menu_params
-      params.require(:menu).permit(:name, :image)
+      params.require(:menu).permit(:name, :image, :avatar)
     end
 end
