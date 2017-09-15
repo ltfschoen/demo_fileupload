@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Create Rails app specifically using PSQL DB
+  ```
+  rails new carrierwave-test --database=postgresql
+  ```
 
-Things you may want to cover:
+* Generate Scaffold of Menu with name and image for File Upload
+  ```
+  rails generate scaffold Menu name:string image:text
+  ```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Start PSQL
+* Create Rails app DB and migrate
+  ```
+  rails db:create db:migrate RAILS_ENV=development
+  ```
+* Add Carrierwave Gem for File Upload
+  ```
+  gem 'carrierwave', '~> 1.0'
+  rails generate uploader Avatar
+  ```
