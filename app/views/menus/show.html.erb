@@ -12,7 +12,7 @@
 
 <p>
   <strong>Avatar:</strong>
-  <%= image_tag(@menu.avatar_url.to_s, class: "avatar_icon") %>
+  <%= image_tag(@menu.avatar_url(:thumb)) %>
 </p>
 
 <%= link_to 'Edit', edit_menu_path(@menu) %> |
