@@ -63,8 +63,15 @@
       ```
       <p>
         <strong>Avatar:</strong>
-        <%= image_tag(@menu.avatar_url.to_s) %>
+        <%= image_tag(@menu.avatar_url.to_s, class: "avatar_icon") %>
       </p>
+      ```
+    * Add CSS style to assets/stylesheets/menus.scss
+      ```
+      .avatar_icon {
+        width: 100px;
+        height: 100px;
+      }
       ```
     * Inspect the Rails server logs that show the `menu_params` that are sent via POST request to
     the MenusController's `create` Action, which shows a temporary file stored on the local machine stores the image and the `filename` is associated with it and stored in the Menu table's `avatar` column as `bg_black.jpg`, i.e.
