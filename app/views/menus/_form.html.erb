@@ -1,4 +1,4 @@
-<%= form_with(model: menu, local: true) do |form| %>
+<%= form_with(model: menu, local: true, html: { multipart: true }) do |form| %>
   <% if menu.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
@@ -19,6 +19,12 @@
   <div class="field">
     <%= form.label :image %>
     <%= form.text_area :image, id: :menu_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avatar %>
+    <%#= form.text_area :avatar, id: :menu_avatar %>
+    <%= file_field(:menu, :avatar, accept: 'image/png,image/gif,image/jpeg') %>
   </div>
 
   <div class="actions">
