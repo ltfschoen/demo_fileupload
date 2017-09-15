@@ -26,6 +26,7 @@
 * Setup File Upload
   * References:
     * https://medium.com/@mauddev/rails-5-and-carrierwave-53960ec20c4b
+    * http://railscasts.com/episodes/253-carrierwave-file-uploads
 
   * Add Carrierwave Gem for File Upload
     ```
@@ -94,3 +95,5 @@
       Now if you change the browser URL to
       `http://localhost:3000/uploads/menu/avatar/2/bg_black.jpg`
       it loads your image.
+    * Generate thumbnail for file upload using RMagick Gem instead of using CSS
+      [RailsCast Demo](http://railscasts.com/episodes/253-carrierwave-file-uploads)
